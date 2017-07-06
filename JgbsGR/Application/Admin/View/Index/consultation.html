@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Admin Project</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/project_content.css">
+    <script src="__PUBLIC__/front/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<layout name="Layout/layout" />
+<h4 style="position: relative;margin-left: 60px;">咨询：</h4>
+<div style="padding-bottom: 30px;width: 685px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+            <ul>
+                <div class="pro_label"><span>编号</span><span>标题</span><span style="left: 110px">内容</span><span class="pro_label2">用户名</span><span class="pro_label2">日期</span></div>
+                <volist name="results" id="result" >
+                    <li class="pro_li" rel="{$result.cst_id}">
+                        <span class="sp1">{$result.cst_id}</span>
+                        <span class="sp2"><a href="#" title="{$result.cst_title}">{$result.cst_title}</a></span>
+                        <span class="sp3"><a href="#" title="{$result.cst_content}">{$result.cst_content}</a></span>
+                        <span class="sp4">{$result.cst_belong_user}</span>
+                        <span class="sp5">{$result.cst_date}</span>
+                        <a href="#" class="sp6 ibtn" rel="{$result.cst_id}"><i></i></a>
+                        <button class="btn btn-warning spbtn" style="left: 530px"><a href="__URL__/del_btn/cst_id/{$result.cst_id}">删除</a></button>
+                        <div class="idiv" rel="{$result.cst_id}" style="display: none;z-index: 99;    padding: 0 30px 30px 0;position: absolute;margin-top:-20px;background: #fff;;border: 0px silver solid">
+                            <ul>
+                                <volist name="result.replies" id="reply" >
+                                    <div class="pro_label"><span>编号</span><span style="left: 110px">回复内容</span><span class="pro_label2">回复用户</span><span class="pro_label2">日期</span></div>
+                                    <li class="pro_li">
+                                        <span class="sp1 cst1" >{$reply.reply_id}</span>
+                                        <span class="sp3 cst2"><a href="#" title="{$reply.reply_conment}">{$reply.reply_conment}</a></span>
+                                        <span class="sp4 cst3">{$reply.user_id}</span>
+                                        <span class="sp5 cst4">{$reply.reply_date}</span>
+                                        <button class="btn btn-warning spbtn" style="left: 525px"><a href="__URL__/del_btn/reply_id/{$reply.reply_id}">删除</a></button>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </li>
+                </volist>
+            </ul>
+    </div>
+</div>
+<script>
+       $(document).ready(function(){
+           //编辑按钮
+//           $('.ibtn').on('click',function(event){
+           $('.ibtn').on('click',function(){
+               if($(this).siblings('div').css('display')=='block'){
+                   $(this).siblings('div').hide('slow');
+                   $(this).children('i').css('border-color','rgb(148, 144, 101) transparent transparent');
+               }else if($(this).siblings('div').css('display')=='none'){
+                   $(this).siblings('div').show('slow');
+                   $(this).children('i').css('border-color','transparent transparent rgb(148, 144, 101)');
+               }
+
+
+//               })
+//               $('.pro_li').click(function(){
+//                   index = $(this).prevAll().length;
+//               }) ;
+//               that = $(this);
+//               if($(".idiv").css('display')=='block'){
+//                   $(".idiv").hide('slow');
+//                   $(".ibtn i").css('border-color','rgb(148, 144, 101) transparent transparent');
+//               }else{
+//                   $(".idiv").show('slow');
+//                   $(".ibtn i").css('border-color','transparent transparent rgb(148, 144, 101)');
+//               }
+//                       that = $(this);
+//                       $.ajax({
+//                           type: "POST",
+//                           url:"__URL__/cst_btn",
+//                           data: {
+//                               "uid": that.attr("rel"),
+//                           },
+//                           dataType:'json',
+//                           success:function(jsonResult){
+//                               alert(jsonResult);
+//                               $('.cst1').val=(jsonResult.reply_id);
+//                               alert(jsonResult.reply_id);
+//
+//                           },
+//                           error:function(e){
+//                               alert('error');
+//                           }
+//                       });
+
+
+           });
+       });
+</script>
+</body>
+</html>

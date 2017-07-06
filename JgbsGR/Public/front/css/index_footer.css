@@ -1,0 +1,55 @@
+/*µ×²¿css*/
+*{margin:0;padding:0;}
+body{
+	background-image: url(../images/bkg.jpg);
+}
+.bg{
+	background-image: url(../images/bkg.jpg);
+	background-size: 105% 42%;
+	background-repeat: no-repeat;
+}
+.bg1{
+	background-image: url(../images/bkg.jpg);
+	background-size:100% 100%;
+	background-repeat:no-repeat	;
+}
+.bg2{
+	background-image: url(../images/bkg1.jpg);
+	background-size:100% 100%;
+	background-repeat:no-repeat	;
+}
+#footer{
+	width: 100%;
+	height: 220px;
+	background: #4D4D4C;
+	color: #fff;
+	position: relative;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 5px;
+}
+#footer a{
+	color: #9da1b5;
+}
+#footer a:hover{
+	color: #fff;
+}
+#foot_email{
+	color: #fff;
+	position: relative;
+	font-size: 20px;
+}
+#footer h2{
+	font-size: 5px;
+	margin: 5px 0 20px 0;
+}
+#footer h2 span{
+	padding:10px 2.5%;
+	display:inline-block;
+}
+#footer p{
+	margin: 20px;
+}
+#footer .foot_over{
+	color: #928c8c;
+}

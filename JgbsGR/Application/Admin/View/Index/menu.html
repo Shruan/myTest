@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- Basic -->
+    	<meta charset="UTF-8" />
+		<title>Admin Menu</title>
+		<!-- Mobile Metas -->
+	    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+		<script src="__PUBLIC__/js/jquery-2.1.1.min.js"></script>
+
+	</head>
+
+	<body>
+		<!-- Start: Content -->
+		<div class="container-fluid content">
+			<div class="row">
+				<!-- Sidebar -->
+				<div class="sidebar">
+					<div class="sidebar-collapse">
+						<!-- Sidebar Header Logo-->
+						<div class="sidebar-header">
+							<img src="__PUBLIC__/img/logo.png" class="img-responsive" alt="" />
+						</div>
+						<!-- Sidebar Menu-->
+						<div class="sidebar-menu">
+							<nav id="menu" class="nav-main" role="navigation">
+								<ul class="nav nav-sidebar">
+									<div class="panel-body text-center">
+										<div class="flag">
+											<img src="__PUBLIC__/img/flags/USA.png" class="img-flags" alt="" />
+										</div>
+									</div>
+
+									<li class="active">
+										<a href="index.html">
+											<i class="fa fa-laptop" aria-hidden="true"></i><span>界面首页</span>
+										</a>
+									</li>
+
+									<li>
+										<a href="{:U('index/project')}" target="_self">
+											<span class="pull-right label label-danger p_label" style="left: -15px;position: relative;"></span>
+											<i class="fa fa-envelope" aria-hidden="true"></i><span>委托项目管理</span>
+										</a>
+									</li>
+
+									<li class="nav-parent">
+										<a>
+											<span class="pull-right label label-danger p_label4" style="left: -15px;position: relative;"></span>
+											<i class="fa fa-copy" aria-hidden="true"></i><span>混合项目管理</span>
+										</a>
+										<ul class="nav nav-children">
+											<li><a href="{:U('index/project_team')}" target="_self" >
+												<span class="pull-right label label-danger p_label1"></span>
+												<span class="text"> 团队招募</span>
+											</a></li>
+											<li><a href="{:U('index/project_find')}" target="_self">
+												<span class="pull-right label label-danger p_label2"></span>
+												<span class="text"> 寻物任务</span></a></li>
+											<li><a href="{:U('index/project_ad')}" target="_self">
+												<span class="pull-right label label-danger p_label3"></span>
+												<span class="text"> 商业广告</span></a></li>
+										</ul>
+									</li>
+
+									<li class="nav-parent">
+										<li>
+											<a href="{:U('index/consultation')}" target="_self">
+												<i class="fa fa-life-bouy" aria-hidden="true"></i><span>咨询/交流板块管理</span>
+											</a>
+										</li>
+										<li>
+											<a href="{:U('index/notice')}" target="_self">
+												<i class="fa fa-calendar" aria-hidden="true"></i><span>公告管理</span>
+											</a>
+										</li>
+										<li>
+											<a href="{:U('index/lunbo')}" target="_self">
+												<i class="fa fa-picture-o" aria-hidden="true"></i><span>轮播广告图管理</span>
+											</a>
+										</li>
+										<li>
+											<a href="{:U('index/user_information')}" target="_self">
+												<i class="fa fa-font" aria-hidden="true"></i><span>用户个人信息管理</span>
+											</a>
+										</li>
+								</ul>
+							</nav>
+						</div>
+						<!-- End Sidebar Menu-->
+					</div>
+					<!-- Sidebar Footer-->
+					<div class="sidebar-footer">
+					</div>
+					<!-- End Sidebar Footer-->
+				</div>
+				<!-- End Sidebar -->
+			</div><!--/container-->
+		<div class="clearfix"></div>
+	</div>
+	</body>
+	<script>
+		$.ajax({
+			type: "POST",
+			url: "__URL__/menu",
+			data: {
+				p_label: $('p_label').text()
+			},
+			dataType: 'json',
+			success: function (jsonResult) {
+				$('.p_label').text(jsonResult[0]);
+				$('.p_label4').text(jsonResult[4]);
+				$('.p_label1').text(jsonResult[1]);
+				$('.p_label2').text(jsonResult[2]);
+				$('.p_label3').text(jsonResult[3]);
+//				alert(jsonResult);
+			},
+			error: function (e) {
+				alert('error');
+			}
+		})
+	</script>
+</html>

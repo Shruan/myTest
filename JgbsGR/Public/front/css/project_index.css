@@ -1,0 +1,20 @@
+li{
+    width:500px;
+    height: 20px;
+    border: 1px silver solid;
+    position: relative;
+    margin-top:10px;
+}
+li span{
+    width:90px;
+    height: 20px;
+    border: 1px silver solid;
+}
+.sp2{
+    position: absolute;
+    right:0px;
+}
+.sp1{
+    position: absolute;
+    right: 120px;
+}

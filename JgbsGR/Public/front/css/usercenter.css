@@ -1,0 +1,54 @@
+.center{
+    height:380px;
+    width:750px;
+    border:0px solid black;
+    position:relative;
+    padding-top:5px;
+    margin:25px auto;
+    background: rgba(69, 117, 132, 0.54);
+}
+.headimg{
+    float: left;
+    position: absolute;
+    width: 23%;
+    height: 170px;
+    left: 65%;
+    top: 20%;
+    border: 0px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 7px #d6c7c7;
+}
+h2{
+    padding: 5% 0px 0px 45%;
+    color: #fff;;
+}
+.line{
+    height: 0px;
+    width: 75%;
+    margin-left: 45px;
+    border: 1px solid rgba(255, 255, 255, 0.64);
+    sition: relative;
+    margin-top: 85px;
+}
+.lb2{
+    position: relative;
+    margin: 15px 0px 0 45px ;
+    color: #fff;
+}
+.lb2 label{
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    border: 0px solid;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight:bold;
+}
+.lb2>span{
+    position: relative;
+    height: 40px;
+    width: 100px;
+    margin-left: 134px;
+}
+.edit_btn{
+    margin: 20px 0 0 190px;
+    position: relative;
+}

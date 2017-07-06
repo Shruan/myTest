@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Admin Project</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/project_content.css">
+    <script src="__PUBLIC__/front/js/jquery-1.11.3.min.js"></script>
+</head>
+
+<layout name="Layout/layout" />
+<!--发布回复模块-->
+<div class="consultDiv">
+    <h4 style="position: relative;margin-left: 60px;">发布公告：</h4>
+    <div>
+        <textarea class="ctn" name="content"  rows="3" cols="26" placeholder="内容"
+               style="left: 46px; padding: 10px; position: relative; margin: 0px; width: 652px; height: 102px;"></textarea>
+    </div>
+    <button class="sub btn" type="submit" rel="admin" >发布</button>
+</div>
+
+
+<h4 style="position: relative;margin-left: 60px;">已发布公告:</h4>
+<div style="padding:0 30px 30px 0;width: 670px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+            <ol>
+                <div class="pro_label"><span>编号</span><span style="left: 175px">内容</span><span class="pro_label2" style="left: 330px">日期</span></div>
+                <volist name="notices" id="notice">
+                    <li class="pro_li">
+                        <span class="sp1">{$notice.nt_id}</span>
+                        <span class="sp3">{$notice.nt_content}</span>
+                        <span class="sp5">{$notice.nt_date}</span>
+                    </li>
+                </volist>
+            </ol>
+        <a href="#" style="margin: 10px 350px; position: absolute;">1</a>
+    </div>
+</div>
+
+
+<script>
+       $(document).ready(function(){
+            $('.sub').click(function(){
+                $.ajax({
+                    type:'POST',
+                    url:'__URL__/send_notice',
+                    data:{
+                        content:$('.ctn').val(),
+                    },
+                    success:function(jsonResult){
+                        location.reload();
+                    },
+                    error:function(e){
+                        alert('公告不能为空');
+                    }
+                })
+            })
+       })
+</script>
+</body>
+</html>

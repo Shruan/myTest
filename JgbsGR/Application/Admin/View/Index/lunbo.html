@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Admin Project</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/project_content.css">
+    <script src="__PUBLIC__/front/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<layout name="Layout/layout" />
+<h4 style="position: relative;margin-left: 60px;">待审核:</h4>
+<div style="height: 255px;width: 800px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+            <ul>
+                <div class="pro_label"><span>编号</span><span>标题</span><span style="left: 110px">内容</span><span class="pro_label2">用户名</span><span class="pro_label2">日期</span></div>
+                <volist name="w_projects" id="w_project">
+                    <li class="pro_li">
+                        <span class="sp1">{$w_project.pro_id}</span>
+                        <span class="sp2"><a href="#" title="{$w_project.pro_title}">{$w_project.pro_title}</a></span>
+                        <span class="sp3"><a href="#" title="{$w_project.pro_content}">{$w_project.pro_content}</a></span>
+                        <span class="sp4">{$w_project.pro_belong_user}</span>
+                        <span class="sp5">{$w_project.pro_date}</span>
+                        <button class="btn btn-warning spbtn" name="{$w_project.pro_id}"  >
+                            <a href=" __URL__/pass_btn/pro_id/{$w_project.pro_id}">通过</a>
+                        </button>
+                        <button class="btn btn-warning spbtn" name="{$w_project.pro_id}"  >
+                            <a href=" __URL__/false_btn/pro_id/{$w_project.pro_id}">不通过</a>
+                        </button>
+                    </li>
+                </volist>
+            </ul>
+        <a href="#" style="margin: 10px 350px; position: absolute;">1</a>
+    </div>
+</div>
+
+<h4 style="position: relative;margin-left: 60px;">审核通过:</h4>
+<div style="height: 255px;width: 800px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+        <ul>
+            <div class="pro_label"><span>编号</span><span>标题</span><span style="left: 110px">内容</span><span class="pro_label2">用户名</span><span class="pro_label2">日期</span><span class="pro_label2">接取</span><span class="pro_label2">完成</span></div>
+            <volist name="a_projects" id="a_project">
+                <li class="pro_li">
+                    <span class="sp1">{$a_project.pro_id}</span>
+                    <span class="sp2"><a href="#" title="{$a_project.pro_title}">{$a_project.pro_title}</a></span>
+                    <span class="sp3"><a href="#" title="{$a_project.pro_content}">{$a_project.pro_content}</a></span>
+                    <span class="sp4">{$a_project.pro_belong_user}</span>
+                    <span class="sp5">{$a_project.pro_date}</span>
+                    <span class="sp6">{$a_project.pro_acc_user}</span>
+                    <span class="sp7">{$a_project.pro_complete}</span>
+                    <button class="edit-btn btn btn-warning spbtn2 spbtn " rel="{$a_project.pro_id}">编辑</button>
+                    <button class="btn btn-warning spbtn2 spbtn" ><a href=" __URL__/del_btn/pro_id/{$a_project.pro_id}">删除</a></button>
+                </li>
+            </volist>
+        </ul>
+        <a href="#" style="margin: 10px 350px; position: absolute;">1</a>
+    </div>
+</div>
+
+<h4 style="position: relative;margin-left: 60px;">审核未通过:</h4>
+<div style="height: 255px;width: 800px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+        <ul>
+            <div class="pro_label"><span>编号</span><span>标题</span><span style="left: 110px">内容</span><span class="pro_label2">用户名</span><span class="pro_label2">日期</span></div>
+            <volist name="f_projects" id="f_project">
+                <li class="pro_li">
+                    <span class="sp1">{$f_project.pro_id}</span>
+                    <span class="sp2"><a href="#" title="{$f_project.pro_title}">{$f_project.pro_title}</a></span>
+                    <span class="sp3"><a href="#" title="{$f_project.pro_content}">{$f_project.pro_content}</a></span>
+                    <span class="sp4">{$f_project.pro_belong_user}</span>
+                    <span class="sp5">{$f_project.pro_date}</span>
+                    <button class="btn btn-warning spbtn">删除</button>
+                </li>
+            </volist>
+        </ul>
+        <a href="#" style="margin: 10px 350px; position: absolute;">1</a>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="mask"></div>
+<div class="edit">
+    <span class="close"></span>
+    <div class="title"><h3>编辑</h3></div>
+    <div class="lg">
+        <form id="frm" action="" method="post">
+            <span>标题：<input class="ipt1" name="pro_title" type="text" value=""/></span>
+            <span>内容：<textarea class="ipt2" name="pro_content" type="text" value="" rows="3" cols="26"></textarea>   </span>
+            <span>用户：<input class="ipt3" name="pro_belong_user" type="text" value=""/></span>
+            <span>日期：<input class="ipt4" name="pro_date" type="text" value=""/></span>
+            <span>接取：<input class="ipt5" name="pro_acc_user" type="text" value=""/></span>
+            <span>完成：<input class="ipt6" name="pro_complete" type="text" value=""/></span></br>
+            <button class="sub btn" type="submit" value="" rel="1"/>保存</button>
+        </form>
+    </div>
+</div>
+<script>
+       $(document).ready(function(){
+           //编辑按钮
+           $('.edit-btn').on('click',function(event){
+               that = $(this);
+               $.ajax({
+                   type: "POST",
+                   url:"__URL__/edit_btn",
+                   data: {
+                       "uid": that.attr("rel"),
+                   },
+                   dataType:'json',
+                   success:function(jsonResult){
+                       $('.sub').val(jsonResult.pro_id);
+                       $('.ipt1').val(jsonResult.pro_title);
+                       $('.ipt2').val(jsonResult.pro_content);
+                       $('.ipt3').val(jsonResult.pro_belong_user);
+                       $('.ipt4').val(jsonResult.pro_date);
+                       $('.ipt5').val(jsonResult.pro_acc_user);
+                       $('.ipt6').val(jsonResult.pro_complete);
+                   },
+                   error:function(e){
+                       alert('error');
+                   }
+               });
+//               var $pro_title=$('input[name="pro_title"]').val();
+//               var $pro_content=$('input[name="pro_content"]').val();
+//               $.getJSON('__URL__/edit_btn',{pro_title:$pro_title,pro_content:$pro_content},function(json){
+//                   if(json.status==1){
+//                       alert('获取成功 ');
+//                   }else {
+//                       alert('  添加失败 ');
+//                   }
+               $(".mask").css("display","block");
+               $(".edit").fadeIn(3000);
+           });
+           //保存数据
+           $('.sub').on('click',function(){
+               that = $(this);
+               $.ajax({
+                   type: "POST",
+                   url:"__URL__/save_btn",
+                   data: {
+                       "uid": that.val(),
+                       "pro_title":$('.ipt1').val(),
+                       "pro_content":$('.ipt2').val(),
+                       "pro_belong_user": $('.ipt3').val(),
+                       "pro_date": $('.ipt4').val(),
+                       "pro_acc_user": $('.ipt5').val(),
+                       "pro_complete": $('.ipt6').val(),
+                   },
+                   dataType:'json',
+                   success:function(jsonResult){
+                       alert(jsonResult);
+                   },
+                   error:function(e){
+                       alert('error');
+                   }
+               });
+           })
+           //关闭弹出层
+           $('.close').on('click',function(){;
+               $(".mask").css("display","none");
+               $(".edit").css("display","none");
+           })
+       })
+</script>
+</body>
+</html>

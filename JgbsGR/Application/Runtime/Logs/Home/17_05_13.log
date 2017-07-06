@@ -1,0 +1,1492 @@
+[ 2017-05-13T00:10:40+08:00 ] 127.0.0.1 /index.php/Home/Project/send_pid/pid/24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000747s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='24'AND pro_type=1 AND pro_examine=1 )  [ RunTime:0.0008s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001226s ]
+
+[ 2017-05-13T00:10:41+08:00 ] 127.0.0.1 /index.php/Home/Project/is_acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='24'AND pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2017-05-13T00:10:44+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-05-13T00:10:50+08:00 ] 127.0.0.1 /index.php/Home/Project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059325s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000807s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2017-05-13T00:12:21+08:00 ] 127.0.0.1 /index.php/Home/Project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000662s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001158s ]
+
+[ 2017-05-13T00:12:26+08:00 ] 127.0.0.1 /index.php/Home/Project/send_pid/pid/43
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='43'AND pro_type=1 AND pro_examine=1 )  [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2017-05-13T00:12:27+08:00 ] 127.0.0.1 /index.php/Home/Project/is_acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001027s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='43'AND pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000761s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000823s ]
+
+[ 2017-05-13T00:12:32+08:00 ] 127.0.0.1 /index.php/Home/Project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000667s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000731s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000812s ]
+
+[ 2017-05-13T00:12:45+08:00 ] 127.0.0.1 /index.php/Home/Project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060518s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001246s ]
+
+[ 2017-05-13T00:12:48+08:00 ] 127.0.0.1 /index.php/Home/Project/send_pid/pid/42
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='42'AND pro_type=1 AND pro_examine=1 )  [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001228s ]
+
+[ 2017-05-13T00:12:49+08:00 ] 127.0.0.1 /index.php/Home/Project/is_acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='42'AND pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000952s ]
+
+[ 2017-05-13T00:14:52+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.131322s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2017-05-13T00:14:55+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001642s ]
+
+[ 2017-05-13T00:54:08+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010704s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2017-05-13T00:55:06+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000836s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.123667s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001194s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001341s ]
+
+[ 2017-05-13T00:55:12+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000273s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2017-05-13T00:55:26+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/edit_btn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001469s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001414s ]
+
+[ 2017-05-13T00:57:32+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001116s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001320s ]
+
+[ 2017-05-13T01:01:26+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.121314s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001169s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001306s ]
+
+[ 2017-05-13T01:04:09+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001020s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2017-05-13T01:04:15+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.117616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2017-05-13T01:04:18+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010620s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000507s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2017-05-13T01:04:30+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000599s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001278s ]
+
+[ 2017-05-13T01:04:33+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000676s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000992s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001097s ]
+
+[ 2017-05-13T01:05:11+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001105s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_id=6 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000707s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-05-13T01:05:13+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000678s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='6' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.118333s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000996s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2017-05-13T09:22:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.052869s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.052960s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='' ) LIMIT 1   [ RunTime:0.0867s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0717s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 2,7   [ RunTime:0.0124s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0591s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0768s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.283152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.283301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.016799s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.030660s ]
+INFO: [ app_end ] --END-- [ RunTime:0.030864s ]
+
+[ 2017-05-13T09:22:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 2,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.115836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000891s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2017-05-13T09:22:22+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000587s ]
+
+[ 2017-05-13T09:23:13+08:00 ] 127.0.0.1 /index.php/Home/login/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053363s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2017-05-13T09:23:24+08:00 ] 127.0.0.1 /index.php/Home/login/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000542s ]
+
+[ 2017-05-13T09:23:25+08:00 ] 127.0.0.1 /index.php/Home/login/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2017-05-13T09:23:30+08:00 ] 127.0.0.1 /index.php/Home/login/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: INSERT INTO `jgbs_user` (`user_username`,`user_password`) VALUES ('邱世源·','e10adc3949ba59abbe56e057f20f883e') [ RunTime:0.0592s ]
+
+[ 2017-05-13T09:23:30+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000506s ]
+
+[ 2017-05-13T09:23:39+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_username='邱世源' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2017-05-13T09:23:40+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000725s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007296s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2017-05-13T09:23:44+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_username='邱世源' ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2017-05-13T09:23:46+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000396s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2017-05-13T09:23:52+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000574s ]
+
+[ 2017-05-13T09:23:54+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008046s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-05-13T09:23:57+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_username='邱世源·' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2017-05-13T09:23:59+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000526s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 2,7   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.104274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.104376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000788s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000857s ]
+
+[ 2017-05-13T09:24:07+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: select * from jgbs_user where user_id=7 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085226s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2017-05-13T09:24:11+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/edit_btn
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+
+[ 2017-05-13T09:24:19+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/user_save
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000434s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000503s ]
+SQL: UPDATE `jgbs_user` SET `user_username`='邱世源·',`user_gender`='',`user_age`='0',`user_phone`='18650380324' WHERE ( user_id='7' ) [ RunTime:0.0315s ]
+NOTIC: [8] Undefined variable: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Home\Controller\UserInformationController.class.php 第 70 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000890s ]
+
+[ 2017-05-13T09:24:20+08:00 ] 127.0.0.1 /index.php/Home/UserInformation/userinformation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: select * from jgbs_user where user_id=7 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Undefined index: user_email D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\bf1c0f440bed6a7d5fd3ad56bf5372e2.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010775s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000608s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2017-05-13T09:24:34+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 2,7   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0005s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105934s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000493s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001402s ]
+
+[ 2017-05-13T09:24:43+08:00 ] 127.0.0.1 /index.php/Home/Project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000547s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111187s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003562s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003745s ]
+
+[ 2017-05-13T09:25:02+08:00 ] 127.0.0.1 /index.php/Home/Project/issue.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SELECT `user_username` FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: INSERT INTO `jgbs_project` (`pro_belong_user`,`pro_title`,`pro_content`,`pro_date`,`pro_examine`,`pro_type`) VALUES ('邱世源·','答辩','答辩  ','2017-05-13','0','1') [ RunTime:0.0006s ]
+
+[ 2017-05-13T09:25:04+08:00 ] 127.0.0.1 /index.php/Home/project/all_project.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 )  [ RunTime:0.0005s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054926s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001176s ]
+
+[ 2017-05-13T09:25:11+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 2,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,5   [ RunTime:0.0002s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.116324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.116407s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001287s ]
+
+[ 2017-05-13T09:25:15+08:00 ] 127.0.0.1 /index.php/Home/Consultation/all_Consultation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_consult`  [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001485s ]
+
+[ 2017-05-13T09:25:23+08:00 ] 127.0.0.1 /index.php/Home/Consultation/issue.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: SELECT `user_username` FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `jgbs_consult` (`cst_belong_user`,`cst_title`,`cst_content`,`cst_date`) VALUES ('邱世源·','......','......','2017-05-13') [ RunTime:0.0006s ]
+
+[ 2017-05-13T09:25:24+08:00 ] 127.0.0.1 /index.php/Home/consultation/all_consultation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000588s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_consult`  [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100628s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001255s ]
+
+[ 2017-05-13T09:25:29+08:00 ] 127.0.0.1 /index.php/Home/Consultation/send_cid/cid/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000488s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_consult` WHERE ( cst_id='8' )  [ RunTime:0.0003s ]
+SQL: select * from jgbs_reply join jgbs_user on jgbs_reply.user_id=jgbs_user.user_id where jgbs_reply.consult_id=8 [ RunTime:0.1549s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.100711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100828s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2017-05-13T09:25:36+08:00 ] 127.0.0.1 /index.php/Home/Consultation/reply
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: INSERT INTO `jgbs_reply` (`consult_id`,`user_id`,`reply_conment`,`reply_date`) VALUES ('8','7','456789','2017-05-13') [ RunTime:0.0003s ]
+
+[ 2017-05-13T09:25:36+08:00 ] 127.0.0.1 /index.php/Home/consultation/detail_consultation.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: notices D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\2e4396fccf84cc13bbd9d3d5e313f498.php 第 24 行.
+NOTIC: [8] Undefined variable: consults D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\2e4396fccf84cc13bbd9d3d5e313f498.php 第 44 行.
+NOTIC: [8] Undefined variable: replies D:\Office software\phpStudy\WWW\JgbsGR\Application\Runtime\Cache\Home\2e4396fccf84cc13bbd9d3d5e313f498.php 第 60 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000653s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000713s ]
+
+[ 2017-05-13T09:25:38+08:00 ] 127.0.0.1 /index.php/Home/Consultation/send_cid/cid/8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_consult` WHERE ( cst_id='8' )  [ RunTime:0.0003s ]
+SQL: select * from jgbs_reply join jgbs_user on jgbs_reply.user_id=jgbs_user.user_id where jgbs_reply.consult_id=8 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061186s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000769s ]
+
+[ 2017-05-13T09:26:16+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='1' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 3,8   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.109127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000723s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2017-05-13T09:26:22+08:00 ] 127.0.0.1 /index.php/Home/Project/send_pid/pid/49
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000482s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49'AND pro_type=1 AND pro_examine=1 )  [ RunTime:0.0003s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129610s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000802s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000915s ]
+
+[ 2017-05-13T09:26:23+08:00 ] 127.0.0.1 /index.php/Home/Project/is_acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49'AND pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001598s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001754s ]
+
+[ 2017-05-13T09:26:27+08:00 ] 127.0.0.1 /index.php/Home/Project/acc_pid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='1' ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: UPDATE `jgbs_project` SET `pro_complete`='0',`pro_acc_user`='admin' WHERE ( pro_id='49' ) [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001281s ]
+
+[ 2017-05-13T09:26:32+08:00 ] 127.0.0.1 /index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-05-13T09:26:33+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 3,8   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,6   [ RunTime:0.0003s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0002s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.105694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.105779s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2017-05-13T09:26:46+08:00 ] 127.0.0.1 /index.php/Home/login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_username='邱世源·' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-05-13T09:26:47+08:00 ] 127.0.0.1 /index.php/Home/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=1 AND pro_examine=1 ) LIMIT 3,8   [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=2 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=3 AND pro_examine=1 ) LIMIT 3,7   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_type=4 AND pro_examine=1 ) LIMIT 2,6   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_consult` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `jgbs_consult` LIMIT 0,6   [ RunTime:0.0004s ]
+SQL: select * from jgbs_user where user_pro_num > 0  order by user_pro_num desc limit 5 [ RunTime:0.0004s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2017-05-13T09:26:51+08:00 ] 127.0.0.1 /index.php/Home/Project/send_pid/pid/49
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SELECT * FROM `jgbs_user` WHERE ( user_id='7' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49'AND pro_type=1 AND pro_examine=1 )  [ RunTime:0.0005s ]
+SQL: select * from jgbs_notice where nt_id > 0  order by nt_id desc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.071118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000942s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001282s ]
+
+[ 2017-05-13T09:26:52+08:00 ] 127.0.0.1 /index.php/Home/Project/is_acc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49'AND pro_type=1 AND pro_examine=1 ) LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001019s ]
+
+[ 2017-05-13T09:26:58+08:00 ] 127.0.0.1 /index.php/Home/Project/over_pid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+SQL: UPDATE `jgbs_project` SET `pro_complete`='1' WHERE ( pro_id='49' ) [ RunTime:0.0006s ]
+SQL: select pro_acc_user from jgbs_project where pro_id=49 [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `jgbs_project` WHERE ( pro_acc_user='admin' and pro_complete=1 and pro_type=1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `jgbs_user` SET `user_pro_num`='1' WHERE ( user_username='admin' ) [ RunTime:0.0007s ]
+SQL: SELECT * FROM `jgbs_project` WHERE ( pro_id='49' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001584s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001725s ]
+

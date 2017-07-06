@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> Admin Project</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/project_content.css">
+    <script src="__PUBLIC__/front/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<layout name="Layout/layout" />
+<h4 style="position: relative;margin-left: 60px;">用户个人信息：</h4>
+<div style="padding-bottom: 30px;width: 800px;background: white;margin-left: 5%; border-radius: 10px; ">
+    <div style="position:relative;">
+        <ul>
+            <div class="pro_label"><span>编号</span>
+                <span style="left: 10px;">用户名</span>
+                <span style="left: 25px;">性别</span>
+                <span style="left: 60px">联系电话</span>
+                <span class="pro_label2" style="left: 85px;position: relative;">年龄</span>
+                <span class="pro_label2" style="left: 75px;">完成项目数量</span></div>
+            <volist name="results" id="result" >
+                <li class="pro_li" rel="{$result.cst_id}">
+                    <span class="sp1">{$result.user_id}</span>
+                    <span class="sp2" ><a href="#" title="">{$result.user_username}</a></span>
+                    <span class="sp2" style="position: absolute;left: 85px"><a href="#" title="">{$result.user_gender}</a></span>
+                    <span class="sp4" style="left: 190px;">{$result.user_phone}</span>
+                    <span class="sp5" style="left: 330px;">{$result.user_age}</span>
+                    <span class="sp5" style="left: 420px;">{$result.user_pro_num}</span>
+                    <a href="#" class="sp6 ibtn" rel="{$result.cst_id}"><i></i></a>
+                    <div class="idiv" rel="{$result.cst_id}" style="display: none;z-index: 99;position: absolute;margin-top:30px;background: #fff;border: 0px silver solid">
+                        <ul>
+                            <volist name="result.replies" id="reply" >
+                                <div class="pro_label">
+                                    <span>编号</span><span style="left: 110px">回复内容</span>
+                                    <span class="pro_label2" style="left: 180px;">回复用户</span>
+                                    <span class="pro_label2">日期</span>
+                                </div>
+                                <li class="pro_li">
+                                    <span class="sp1 cst1" style="left: 15px;">{$reply.reply_id}</span>
+                                    <span class="sp3 cst2" style="left: 100px;"><a href="#" title="{$reply.reply_conment}">{$reply.reply_conment}</a></span>
+                                    <span class="sp4 cst3">{$reply.user_id}</span>
+                                    <span class="sp5 cst4" style="right: 70px;">{$reply.reply_date}</span>
+                                </li>
+                            </volist>
+                        </ul>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        //编辑按钮
+//        $('.pro_li').on('click',function(){
+//            if($(this).children('div').css('display')=='block'){
+//                $(this).children('div').hide('slow');
+//                $(this).children('a').children('i').css('border-color','rgb(148, 144, 101) transparent transparent');
+//            }else if($(this).children('div').css('display')=='none'){
+//                $(this).children('div').show('slow');
+//                $(this).children('a').children('i').css('border-color','transparent transparent rgb(148, 144, 101)');
+//            }
+//        });
+        $('.ibtn').on('click',function(){
+            if($(this).siblings('div').css('display')=='block'){
+                $(this).siblings('div').hide('slow');
+                $(this).children('i').css('border-color','rgb(148, 144, 101) transparent transparent');
+            }else if($(this).siblings('div').css('display')=='none'){
+                $(this).siblings('div').show('slow');
+                $(this).children('i').css('border-color','transparent transparent rgb(148, 144, 101)');
+            }
+        });
+    });
+</script>
+</body>
+</html>
