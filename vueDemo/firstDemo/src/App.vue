@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
-    <gr-header  :loginValue="'登录'" :showLogin='showLogin'></gr-header>
+    <gr-header :loginValue="'登录'" :showLogin='showLogin'></gr-header>
     <div class="mask"></div>
     <div class="login" :style='loginDisplay'>
       <div class="title">用户登陆<span class="close" @click='closeLogin()'></span></div>
