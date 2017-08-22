@@ -76,20 +76,27 @@ export default {
     }
   },
   created () {
-
+    // let url = this.webUrl + '/Api/Location/getCommunity'
+    let url = this.webUrl + '/index.php/Home/index/test'
+    this.$http.get(url).then(res => {
+      res = res.data
+      console.log(res)
+    })
   },
   mounted () {
+    let tabColor = document.getElementsByClassName('tabColor')[0]
     let contentDiv = document.getElementsByClassName('content')
     contentDiv[0].style.display = 'block'
     let clickLi = document.getElementsByClassName('clickTab')[0].getElementsByTagName('li')
-    console.log(clickLi)
     for (let i = 0; i < clickLi.length; i += 1) {
       clickLi[i].onclick = (function (i) {
         return function () {
           for (let j = 0; j < contentDiv.length; j++) {
             contentDiv[j].style.display = 'none'
+            this.removeClass(tabColor, 'tabColor')
           }
           contentDiv[i].style.display = 'block'
+          // console.log(tabColor)
         }
       })(i)
     }
