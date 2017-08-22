@@ -22,7 +22,6 @@
 
 <script>
 // import holdno from '@/lib/utils'
-
 export default {
   components: {
 
