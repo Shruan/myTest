@@ -36,9 +36,8 @@ export default {
   created () {
     // this.$router.push('/vgoods')
     this.$http.get('/api/seller').then(res => {
-      console.log(res)
-
       res = res.data
+      this.seller = res.data
       console.log(res)
     })
   }
@@ -46,14 +45,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 .tab{
   display: flex;
   position: relative;
@@ -85,5 +76,9 @@ export default {
   font-size: 14px;
   color: rgb(77, 85, 93);
 }
-
+body, html {
+  line-height: 1;
+  font-weight: 200;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif;
+}
 </style>
