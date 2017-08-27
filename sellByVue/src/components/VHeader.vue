@@ -31,17 +31,19 @@
     <div class="background">
       <img :src="seller.avatar" width="100%" height="100%">
     </div>
-    <div v-show="detailshow" class="detail">
-      <div class="detail-wrapper clearfix">
-        <div class="detail-main">
-          <h1 class="name">{{seller.name}}</h1>
-          {{seller.bulletin}}
+    <transition name="fade">
+      <div v-show="detailshow" class="detail">
+        <div class="detail-wrapper clearfix">
+          <div class="detail-main">
+            <h1 class="name">{{seller.name}}</h1>
+            {{seller.bulletin}}
+          </div>
+        </div>
+        <div class="detail-close">
+          <i class="icon-close" @click="showDetail"> X </i>
         </div>
       </div>
-      <div class="detail-close">
-        <i class="icon-close" @click="showDetail"> X </i>
-      </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -173,7 +175,7 @@ export default {
     right: 12px;
     top: 3px;
   }
-  .background{
+  .background {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,6 +195,18 @@ export default {
     height: 100%;
     overflow: auto;
     background: rgba(7, 17, 27, 0.8);
+    backdrop-filter: blur(10px);
+  }
+  .detail {
+    transition: all 0.5s;
+  }
+  /*.detail.fade-transition {
+    opacity: 1;
+    background: rgba(7, 17, 27, 0.8);
+  }*/
+  .detail .fade-enter, .fade-leave-to {
+    opacity: 0;
+    background: rgba(7, 17, 27, 0);
   }
   .cleafix {
     display: inline-block;
@@ -225,6 +239,6 @@ export default {
     line-height: 16px;
     text-align: center;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 700
   }
 </style>
