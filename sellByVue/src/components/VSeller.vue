@@ -1,6 +1,6 @@
 <template>
   <div>
-    i am seller
+    i am seller等待
   </div>
 </template>
 
