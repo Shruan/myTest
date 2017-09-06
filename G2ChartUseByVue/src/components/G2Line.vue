@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" style="width:1000px">
+  <div :id="id" style="max-width:1000px; margin: 0 auto">
 
   </div>
 </template>
