@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 
+axios.defaults.baseURL = process.env.NODE_ENV === 'development' ? '/api' : '/'
+
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
+Vue.prototype.$qs = require('querystring').stringify
 Vue.prototype.webUrl = 'http://www.jgbsgr.com'
 
 /* eslint-disable no-new */

@@ -7,9 +7,21 @@
       <div class="title">用户登陆<span class="close" @click='closeLogin()'></span></div>
       <div class="lg">
         <form>
-          <input class="username" type="text" placeholder="用户名"/></br>
-          <input class="password" type="password" placeholder="密码"/></br>
-          <button class="sub" type="submit" value="">登录</button>
+          <input
+            class="username"
+            type="text"
+            placeholder="用户名"
+            v-model="form.user"
+          />
+          </br>
+          <input
+            class="password"
+            type="password"
+            placeholder="密码"
+            v-model="form.password"
+          />
+          </br>
+          <button @click="login">登录</button>
           <a class="register" href="register.html">立即注册</a>
           <a class="register" href="#">修改密码？</a>
         </form>
@@ -35,6 +47,10 @@ export default {
       loginValue: '',
       loginDisplay: {
         display: 'none'
+      },
+      form: {
+        user: '',
+        password: ''
       }
     }
   },
@@ -47,6 +63,11 @@ export default {
     this.init(Title)
   },
   methods: {
+    login () {
+      this.$http.post('/message', this.$qs(this.form)).then(res => {
+
+      })
+    },
     $ (cn) {
       return document.getElementsByClassName(cn)
     },
